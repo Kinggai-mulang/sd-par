@@ -151,9 +151,9 @@ counts extend the dimension range as an idealized setting.
 
 The public package covers the MATLAB algorithms and simulation comparisons.
 The manuscript's field benchmark uses float solutions from KinPOS and a C
-implementation. Those field inputs and the KinPOS implementation can be
-requested from the corresponding author as described in the manuscript's data
-availability statement. Runtimes vary with MATLAB version, machine, and inputs.
+implementation maintained separately. Field input data are available through
+the corresponding author under the manuscript's data availability statement.
+Runtimes vary with MATLAB version, machine, and inputs.
 
 ## Repository structure
 
@@ -166,6 +166,16 @@ matlab/plotting/     Shared plotting functions
 data/               Generated input caches
 output/             Generated measurements and figures
 ```
+
+## Validation
+
+The release was checked in MATLAB R2024a using a clean Git clone and a reset
+MATLAB path. Small-sample checks exercised all seven primary experiments,
+GB sequences, all three operation-count families, plotting, exports, cache
+reuse, and variance-ordered sequences. The checks used three matrices per
+setting with random dimensions 10 and 12, condition numbers 4 and 16 at
+dimension 10, and GPS satellite counts 5 and 6. They verify the execution
+workflow; the manuscript's 1,000-matrix performance runs are separate.
 
 ## License and citation
 
