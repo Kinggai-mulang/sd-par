@@ -1,0 +1,5 @@
+/data/
+/output/
+/paper_results/
+*.asv
+*.fig
